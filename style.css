@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&family=Gloria+Hallelujah&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Lexend+Deca:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,800&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+    list-style: none;
+    text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    height: 200vh;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    color: var(--black-3);
+}
+
+/* all colors */
+:root {
+    --white: #ffffff;
+    --white-2: #f8f9fa;
+    --black: #000000;
+    --black-2: #202124;
+    --black-3: #303030;
+    --black-4: #5a5a5a;
+    --black-5: #5f6368;
+    --gray: #80868b;
+    --gray-light: #bdc1c6;
+    --dark-blue: #1967d2;
+    --medium-blue: #1a73e8;
+    --light-blue: #4285f4;
+}
+
+/* utility classes */
+
+.padding-container {
+    padding-left: 110px;
+}
+
+.btn-blue {
+    color: var(--white);
+    background-color: var(--medium-blue);
+    font-family: 'Poppins', sans-serif;
+    padding: 12px 35px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* LOGIN BUTTON */
+
+#login-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: var(--white);
+    box-shadow: 0px 3px 8px var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 0.9rem;
+    z-index: 9;
+}
+
+#login-btn svg {
+    width: 25px;
+    opacity: 0.7;
+}
+
+/* ~~~~~~ LEFT SECTION: SIDEBAR STYLE START ~~~~~~ */
+
+#sidebar {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+    display: flex;
+}
+
+#sidebar .left {
+    width: 130px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 200px;
+}
+
+#sidebar .menu-icon svg {
+    width: 40px;
+    opacity: 0.6;
+    cursor: pointer;
+    margin: 40px 0 150px 0;
+}
+
+#sidebar img {
+    transform: rotate(270deg);
+    width: 300px;
+}
+
+/* navigation bar */
+
+#sidebar .right {
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block: 120px;
+    display: none;
+}
+
+#sidebar .nav-item {
+    padding-block: 12px;
+}
+
+#sidebar .nav-item a {
+    font-size: 1.5rem;
+    color: var(--black-2);
+    padding-left: 15px;
+}
+
+#sidebar .nav-item.active a {
+    color: var(--light-blue);
+    border-left: 2px solid var(--light-blue);
+}
+
+#sidebar .other-links a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--black-3);
+}
+
+#sidebar :is(.other-links, .nav-item) a {
+    transition: 0.2s;
+}
+
+#sidebar :is(.other-links, .nav-item) a:hover {
+    color: var(--light-blue);
+}
+
+/* ~~~~~~ LEFT SECTION: SIDEBAR STYLE END ~~~~~~ */
+
+/* ~~~~~~ RIGHT SECTION: CONTENT STYLE START ~~~~~~ */
+
+#content {
+    width: 100%;
+    padding-left: 130px;
+    height: 200%;
+    background-color: var(--white-2);
+}
+
+/* HEADER SECTION */
+
+header {
+    padding-block: 20px;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+header a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: underline;
+    color: var(--light-blue);
+}
+
+/* HERO SECTION */
+
+#hero-section {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+}
+
+.hero-bg-img::before {
+    content: "";
+    position: absolute;
+    background: url(./images/circles-low-opecity.svg) no-repeat;
+    height: 2160px;
+    width: 1920px;
+    inset: auto auto 0 20%;
+    transform: perspective(900px) rotateX(50deg);
+    transform-origin: bottom center;
+}
+
+#hero-section .padding-container {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#hero-section img {
+    width: 300px;
+}
+
+#hero-section h1 {
+    font-size: 7.2rem;
+    font-weight: 400;
+    color: var(--black-2);
+    margin-bottom: 40px;
+}
+
+
+/* ~~~~~~ RIGHT SECTION: SIDEBAR STYLE END ~~~~~~ */
