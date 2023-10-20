@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home | Google Summer of Code</title>
+    <!-- google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- custom css -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+    <!-- OVERLAY -->
+    <div class="overlay"></div>
     <!-- LOGIN BUTTON -->
-    <button id="login-btn">Log In <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13Z"></path></svg></button>
+    <button id="login-btn">
+        Log In <span class="material-symbols-outlined person-icon-login">person</span>
+    </button>
 
     <!-- LEFT SECTION: SIDEBAR -->
     <section id="sidebar">
         <div class="left">
             <div class="menu-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
+                <img src="./images/menu-line.svg" alt="open menu">
             </div>
             <img src="./images/gsoc-logo.svg" alt="gsoc logo" />
         </div>
@@ -53,17 +59,173 @@
                 Welcome to our new site! <a href="#">Learn more</a>
             </p>
         </header>
-        <!-- HERO SECTION -->
+
+        <!-- HERO SECTION START -->
         <main id="hero-section">
             <div class="padding-container">
                 <img src="./images/gsoc-logo.svg" alt="gsoc logo" />
                 <h1>2023 Program</h1>
                 <a href="#" class="btn-blue">GSoC 2023</a>
             </div>
-            <div class="hero-bg-img">
-                <!-- <img src="./images/circles.svg" alt=""> -->
-            </div>
+            <div class="hero-bg-img"></div>
         </main>
+        <!-- HERO SECTION END -->
+
+        <!-- FEATURES SECTION START -->
+        <section id="features-section">
+            <div class="left">
+                <h2>What is Google Summer of Code?</h2>
+                <p>Google Summer of Code is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors.</p>
+                <a href="#" class="btn-transparent">Learn more</a>
+            </div>
+            <div class="right">
+                <div class="item">
+                    <strong>19K+</strong>
+                    <p>New Contributors</p>
+                </div>
+                <div class="item">
+                    <strong>112</strong>
+                    <p>Countries</p>
+                </div>
+                <div class="item">
+                    <strong>43M+</strong>
+                    <p>Lines of Code</p>
+                </div>
+                <div class="item">
+                    <strong>800+</strong>
+                    <p>Open Source Organizations</p>
+                </div>
+                <div class="item">
+                    <strong>18K+</strong>
+                    <p>Mentors</p>
+                </div>
+                <div class="item">
+                    <strong>18</strong>
+                    <p>Years</p>
+                </div>
+            </div>
+        </section>
+        <!-- FEATURES SECTION END -->
+
+        <!-- GSOC CONTRIBUTOR SECTION START -->
+        <section id="contributor-section" title="Become a GSoC contributor">
+            <div class="padding-container">
+                <div class="contributor-details">
+                    <h3>Become a GSoC contributor</h3>
+                    <p>Are you new to open source and want to learn more about some interesting projects that you can contribute to? Join GSoC where mentors will help guide you on your journey!</p>
+                    <p>It is very important to reach out to the organizations that you are interested in as soon as possible. The more conversations you have with the community before you submit your proposal the better your chances of being selected into the GSoC.</p>
+                    <a href="#" class="btn-blue">View 2023 project list</a>
+                </div>
+                <div class="features-cards-container">
+                    <div class="features-card">
+                        <div class="icon">
+                            <span class="material-symbols-outlined play_circle">play_circle</span>
+                        </div>
+                        <p>Want to learn more about Google Summer of Code?</p>
+                        <a href="#">Watch Video</a>
+                    </div>
+                    <div class="features-card">
+                        <div class="icon">
+                            <span class="material-symbols-outlined group-icon">group</span>
+                        </div>
+                        <p>Open source organizations are ready to welcome new, excited contributors into their communities</p>
+                        <a href="#">Watch Video</a>
+                    </div>
+                    <div class="features-card">
+                        <div class="icon">
+                            <span class="material-symbols-outlined lightbulb">lightbulb</span>
+                        </div>
+                        <p>Learn how to apply to be a GSoC contributor</p>
+                        <a href="#">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- GSOC CONTRIBUTOR SECTION END -->
+
+        <!-- OPEN SOURCE ORGANIZATIONS SECTION START -->
+            <section id="open-source-section">
+                <div class="padding-container">
+                    <h5>Open source organizations</h5>
+                    <p>746 open source organizations have mentored 18,000+ new GSoC contributors since 2005. Our mentoring organizations are eager to teach newcomers to open source about their communities and the thrill of open source development.</p>
+
+                    <div class="wrapper">
+                        <div>
+                            <p>Learn why your organization should participate in GSoC
+                            </p>
+                            <a href="#">
+                                <span class="material-symbols-outlined play_circle">play_circle</span>
+                                <span>Watch video</span>
+                            </a>
+                        </div>
+                        <div>
+                            <p>Interested in being a GSoC Mentor?</p>
+                            <div>
+                                <a href="#">
+                                    <span class="material-symbols-outlined play_circle">play_circle</span>
+                                    <span>Watch video</span>
+                                </a>
+                                <a href="#">
+                                    <span class="material-symbols-outlined play_circle">news</span>
+                                    <span>Read mentor guide</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-browse-org">Browse all 2023 organizations</a>
+                </div>
+            </section>
+        <!-- OPEN SOURCE ORGANIZATIONS SECTION END -->
+
+        <!-- LATEST NEWS SECTION START -->
+            <section id="latest-news-section">
+                <h6>Latest News</h6>
+                <div class="news-container">
+                    <div class="news-container-scroll"></div>
+                </div>
+                <a href="#" class="btn-transparent">View all news</a>
+            </section>
+        <!-- LATEST NEWS SECTION END -->
+
+        <!-- FOOTER SECTION START -->
+        <footer>
+            <div class="top-part">
+                <div class="left">
+                    <img src="./images/gsoc-logo.svg" alt="gsoc logo" />
+                    <p>
+                        Introducing developers to open source 
+                        <br /> software development
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="left-links">
+                        <a href="#">About</a>
+                        <a href="#">Get started</a>
+                        <a href="#">How it works</a>
+                        <a href="#">Past programs</a>
+                        <a href="#">2023 program timeline</a>
+                    </div>
+                    <div class="right-links">
+                        <a href="#">2023 program</a>
+                        <a href="#">News</a>
+                        <a href="#">Help</a>
+                        <a href="#">GSoC YouTube</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-part">
+                <a href="https://www.google.com/" target="_blank">
+                    <img src="./images/google-logo-black.webp" alt="" width="100" />  
+                </a>
+                <a href="#">Privacy</a>
+                <a href="#">Rules</a>
+                <a href="#">Terms</a>
+            </div>
+        </footer>
+        <!-- FOOTER SECTION END -->
     </section>
+    <!-- script -->
+    <script src="./app.js"></script>
 </body>
 </html>
