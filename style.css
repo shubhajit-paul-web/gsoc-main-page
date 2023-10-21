@@ -24,7 +24,7 @@
     --medium-blue: #1a73e8;
     --light-blue: #4285f4;
     --font-poppins: 'Poppins', sans-serif;
-    --font-jetbrains :'JetBrains Mono', monospace, sans-serif
+    --font-jetbrains: 'JetBrains Mono', monospace, sans-serif
 }
 
 html,
@@ -84,6 +84,24 @@ p {
     display: inline-block;
 }
 
+/* Loader */
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--white);
+    z-index: 1100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader img {
+    width: 25%;
+    user-select: none;
+}
+
 /* OVERLAY */
 
 .overlay {
@@ -125,7 +143,7 @@ p {
 #login-btn .person-icon-login {
     font-size: 2rem;
     color: var(--black-4);
-    font-variation-settings: 'FILL' 1;
+    font-variation-settings: 'FILL'1;
 }
 
 /* ~~~~~~ LEFT SECTION: SIDEBAR STYLE START ~~~~~~ */
@@ -180,11 +198,30 @@ p {
     transition: 0.4s;
 }
 
+.close-icon-btn  {
+    width: 50px;
+    height: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    background-color: var(--light-blue);
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.close-icon-btn .close-icon {
+    font-size: 25px;
+    padding-top: 5px;
+}
+
 #sidebar .right.active {
     left: 130px;
-    box-shadow: 0 8px 10px -5px #0003, 
-                0 16px 24px 2px #00000024, 
-                0 6px 30px 5px #0000001f;
+    box-shadow: 0 8px 10px -5px #0003,
+        0 16px 24px 2px #00000024,
+        0 6px 30px 5px #0000001f;
 }
 
 #sidebar .nav-item {
@@ -224,7 +261,7 @@ p {
 
 #content {
     width: 100%;
-    padding-left: 130px;
+    padding-left: 80px;
     height: 200%;
     background-color: var(--white-2);
 }
@@ -247,7 +284,7 @@ header a {
 
 #hero-section {
     width: 100%;
-    height: 500px;
+    height: 55vh;
     position: relative;
     overflow-x: hidden;
 }
@@ -281,7 +318,7 @@ header a {
 }
 
 #hero-section h1 {
-    font-size: 7.2rem;
+    font-size: 6vw;
     font-weight: 400;
     color: var(--black-2);
     margin-bottom: 40px;
@@ -291,14 +328,11 @@ header a {
 
 #features-section {
     width: 100%;
-    height: 450px;
     display: flex;
-    align-items: center;
 }
 
 #features-section>div {
     width: 50%;
-    height: 100%;
     color: var(--white);
 }
 
@@ -313,7 +347,7 @@ header a {
 }
 
 #features-section .left h2 {
-    font-size: 2.2vw;
+    font-size: 2.2rem;
     font-weight: 400;
 }
 
@@ -370,7 +404,7 @@ header a {
 
 #contributor-section h3,
 #open-source-section h5 {
-    font-size: 4.4rem;
+    font-size: 3.6vw;
     font-weight: 400;
     color: var(--black-2);
 }
@@ -410,7 +444,7 @@ header a {
 }
 
 .material-symbols-outlined.group-icon {
-    font-variation-settings: 'FILL' 1;
+    font-variation-settings: 'FILL'1;
     color: #137333;
 }
 
@@ -444,7 +478,7 @@ header a {
     padding: 7.5rem 0 13rem 0;
 }
 
-#open-source-section .padding-container > p {
+#open-source-section .padding-container>p {
     line-height: 1.6rem;
     margin-top: 20px;
 }
@@ -455,7 +489,7 @@ header a {
     gap: 15rem;
 }
 
-#open-source-section .wrapper p { 
+#open-source-section .wrapper p {
     font-size: 1.3rem;
     margin-bottom: 1.2rem;
 }
@@ -503,8 +537,7 @@ header a {
 
 #latest-news-section {
     width: 100%;
-    /* height: 30%; */
-    background: linear-gradient(76.51deg,#185abc,#4285f4);
+    background: linear-gradient(76.51deg, #185abc, #4285f4);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -513,7 +546,7 @@ header a {
 }
 
 #latest-news-section h6 {
-    font-size: 4.4rem;
+    font-size: 3.9vw;
     font-weight: 400;
     color: var(--white);
 }
@@ -549,7 +582,7 @@ header a {
     height: 100%;
     height: auto;
     overflow-y: scroll;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 .news-box {
@@ -647,5 +680,213 @@ footer {
     opacity: 0.9;
 }
 
-
 /* ~~~~~~ RIGHT SECTION: SIDEBAR STYLE END ~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Media Query (Responsive Styles)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width: 1200px) {
+
+    /* utility classes */
+    .padding-container {
+        padding-left: 30px;
+    }
+
+    /* FEATURES SECTION */
+    #features-section .left {
+        padding: 60px;
+    }
+
+    #features-section .right {
+        padding: 40px;
+    }
+
+    #features-section .right .item {
+        flex-basis: 50%;
+        padding: 20px;
+    }
+
+    /* CONTRIBUTOR SECTION */
+    #contributor-section .contributor-details {
+        width: 80%;
+    }
+
+    /* features cards container */
+    .news-container {
+        width: 93%;
+    }
+
+    /* FOOTER SECTION */
+    footer {
+        width: 100%;
+        padding: 2.5rem 3rem 0 3rem;
+    }
+
+    .top-part img {
+        width: 16rem;
+    }
+
+    .top-part .right {
+        gap: 7vw;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    * {
+        cursor: default !important;
+    }
+
+    /* reset headings */
+    h3, h5, h6 {
+        font-size: 2rem !important;
+    }
+
+    /* Hero Section */
+    #hero-section h1 {
+        font-size: 2.8rem;  
+        margin-top: 15px; 
+    }
+
+    /* MOBILE MENUBAR */
+    .mobile-menubar {
+        position: fixed;
+        background-color: #ffffff;
+        backdrop-filter: blur(6px);
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100vw;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #dadada;
+    }
+
+    .close-icon-btn {
+        display: flex;
+    }
+
+    .mobile-menubar img {
+        height: 25px;
+    }
+
+    .mobile-menubar .person-icon-login {
+        color: var(--black-5);
+        font-variation-settings: 'FILL' 1;
+    }
+
+    #content {
+        padding-top: 60px;
+        padding-left: 0;
+    }
+
+    #login-btn {
+        display: none;
+    }
+
+    #sidebar {
+        left: 0;
+        z-index: 1000;
+    }
+
+    #sidebar .left {
+        display: none;
+    }
+
+    /* navigation bar */
+
+    #sidebar .right {
+        width: 92vw;
+        padding-block: 60px;
+        padding-left: 2.4rem;
+        left: -100vw;
+        top: 0;
+    }
+
+    #sidebar .right.activeMob {
+        left: 0px;
+        box-shadow: 0 8px 10px -5px #0003,
+            0 16px 24px 2px #00000024,
+            0 6px 30px 5px #0000001f;
+    }
+
+    #sidebar .nav-item {
+        padding-block: 15px;
+    }
+
+    #sidebar .nav-item a {
+        font-size: 1.2rem;
+        color: var(--black-3);
+    }
+
+    /* FEATURES SECTION */
+    #features-section {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    #features-section>div {
+        width: 100%;
+        color: var(--white);
+    }
+
+    #features-section .left {
+        padding: 40px;
+    }
+
+    #features-section .right {
+        padding: 20px;
+    }
+    
+    #features-section .right .item strong {
+        font-size: 2.2rem;
+    }
+
+    .features-cards-container {
+        flex-direction: column;
+        padding: 0 30px 40px 0;
+    }
+
+    /* CONTRIBUTOR SECTION */
+    #contributor-section {
+        padding: 4rem 0;
+    }
+
+    /* OPEN SOURCE ORGANIZATIONS SECTION */
+    #open-source-section {
+        width: 100%;
+        padding-block: 5rem;
+        background-color: #F8F9FA;
+    }
+
+    #open-source-section .wrapper {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #open-source-section .wrapper p {
+        font-size: 1rem;
+    }
+
+    /* LATEST NEWS SECTION */
+    #latest-news-section {
+        padding-block: 4rem;
+    }
+
+    #latest-news-section::before {
+        display: none;
+    }
+
+    /* FOOTER SECTION */
+    footer .top-part {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    footer .top-part .right {
+        padding-right: 0;
+    }
+}

@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Google Summer of Code</title>
+    <meta name="description" content="Google Summer of Code is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors." />
+    <meta name="keywords" content="gsoc, Google Summer of Code, Open source" />
+    <meta name="author" content="Shubhajit Paul, Google" />
+    <meta name="robots" content="index, follow" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon/gsoc-icon.png" type="image/x-icon">
+    <meta name="theme-color" content="#ffffff" />
     <!-- google icon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- custom css -->
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+    <!-- LOADER -->
+    <div class="loader">
+        <img src="https://cdn.dribbble.com/users/1787505/screenshots/7300251/media/a351d9e0236c03a539181b95faced9e0.gif" alt="">
+    </div>
     <!-- OVERLAY -->
     <div class="overlay"></div>
     <!-- LOGIN BUTTON -->
@@ -17,15 +28,27 @@
         Log In <span class="material-symbols-outlined person-icon-login">person</span>
     </button>
 
+    <!-- MOBILE MENUBAR -->
+    <div class="mobile-menubar">
+        <img src="./images/menu-line.svg" alt="open menu" class="menu-icon-mob" />
+        <img src="./images/gsoc-logo.svg" alt="gsoc logo" />
+        <a href="#">
+            <span class="material-symbols-outlined person-icon-login">person</span>
+        </a>
+    </div>
+
     <!-- LEFT SECTION: SIDEBAR -->
     <section id="sidebar">
         <div class="left">
             <div class="menu-icon">
-                <img src="./images/menu-line.svg" alt="open menu">
+                <img src="./images/menu-line.svg" alt="open menu" />
             </div>
             <img src="./images/gsoc-logo.svg" alt="gsoc logo" />
         </div>
         <div class="right">
+            <div class="close-icon-btn">
+                <span class="material-symbols-outlined close-icon">close</span>
+            </div>
             <nav>
                 <div class="nav-item active">
                     <a href="#">Home</a>
@@ -225,6 +248,7 @@
         </footer>
         <!-- FOOTER SECTION END -->
     </section>
+
     <!-- script -->
     <script src="./app.js"></script>
 </body>
