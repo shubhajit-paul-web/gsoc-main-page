@@ -1,10 +1,10 @@
-// Pre Loader
+/* Pre Loader */
 window.addEventListener("load", function () {
     document.querySelector(".loader").style.display = "none";
 });
 
 window.addEventListener("DOMContentLoaded", function () {
-    // Select DOM elements
+    /* Select DOM elements */
     const newsContainer = document.querySelector(".news-container-scroll");
     const menuIcon = document.querySelector(".menu-icon");
     const sideBar = document.querySelector("#sidebar .right");
@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const menuIconMob = document.querySelector(".menu-icon-mob");
     const closeIconBtn = document.querySelector(".close-icon-btn");
 
-    // Function to toggle menu icon content
+    /* Function to toggle menu icon content */
     function toggleMenuIconContent() {
         if (sideBar.classList.contains("active")) {
             menuIcon.innerHTML = `<img src="./images/close-line.svg" alt="close" />`;
@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Event listeners for mobile menu
+    /* Event listeners for mobile menu */
     menuIconMob.addEventListener("click", function () {
         sideBar.classList.toggle("activeMob");
         overlay.classList.toggle("show");
@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", function () {
         overlay.classList.remove("show");
     });
 
-    // Event listeners for desktop menu
+    /* Event listeners for desktop menu */
     menuIcon.addEventListener("click", function (e) {
         e.stopPropagation();
         sideBar.classList.toggle("active");
@@ -48,7 +48,7 @@ window.addEventListener("DOMContentLoaded", function () {
         toggleMenuIconContent();
     });
 
-    // News Data
+    /* News Data */
     const newsData = [{
             title: "GSoC 2023: project results and feedback part 1",
             semiTitle: "By Open Source Programs Office, Sep 7, 2023",
@@ -66,7 +66,7 @@ window.addEventListener("DOMContentLoaded", function () {
         },
     ];
 
-    // Adding News to the news container
+    /* Adding News to the news container */
     newsData.forEach(function (news) {
         newsContainer.innerHTML += `
             <div class="news-box">
